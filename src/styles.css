@@ -48,15 +48,16 @@
 :root {
   --radius: 0.375rem;
 
-  --bg: oklch(0.18 0.015 240);
-  --bg2: oklch(0.22 0.018 240);
-  --bg3: oklch(0.25 0.02 240);
-  --brand-green: oklch(0.82 0.18 165);
-  --brand-amber: oklch(0.78 0.16 75);
-  --brand-red: oklch(0.65 0.24 18);
-  --text1: oklch(0.95 0.01 230);
-  --text2: oklch(0.68 0.04 230);
-  --text3: oklch(0.45 0.04 230);
+  /* Industrial B2B palette — exact hex from spec */
+  --bg: #080c10;
+  --bg2: #0d1218;
+  --bg3: #111920;
+  --brand-green: #00e5a0;
+  --brand-amber: #f5a623;
+  --brand-red: #ff3d57;
+  --text1: #e8f0f8;
+  --text2: #7a9ab5;
+  --text3: #3d5a72;
 
   --background: var(--bg);
   --foreground: var(--text1);
@@ -74,8 +75,8 @@
   --accent-foreground: var(--text1);
   --destructive: var(--brand-red);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.32 0.025 230);
-  --input: oklch(0.32 0.025 230);
+  --border: #1e2d3d;
+  --input: #1e2d3d;
   --ring: var(--brand-green);
 }
 
@@ -129,6 +130,13 @@
   from { width: 0%; }
   to { width: 100%; }
 }
+
+/* Camera corner brackets */
+.corner { position: absolute; width: 24px; height: 24px; pointer-events: none; }
+.corner.tl { top: 12px; left: 12px; border-top: 2px solid var(--color-brand-green); border-left: 2px solid var(--color-brand-green); }
+.corner.tr { top: 12px; right: 12px; border-top: 2px solid var(--color-brand-green); border-right: 2px solid var(--color-brand-green); }
+.corner.bl { bottom: 12px; left: 12px; border-bottom: 2px solid var(--color-brand-green); border-left: 2px solid var(--color-brand-green); }
+.corner.br { bottom: 12px; right: 12px; border-bottom: 2px solid var(--color-brand-green); border-right: 2px solid var(--color-brand-green); }
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
